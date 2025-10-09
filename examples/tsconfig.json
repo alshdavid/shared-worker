@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "checkJs": true,
+    "strict": true,
+    "lib": ["DOM", "ESNext"],
+    "module": "nodenext",
+    "noEmit": true,
+    "declaration": true,
+    "moduleResolution": "nodenext",
+    "paths": {
+      "@alshdavid/shared-worker/*": ["../*"]
+    }
+  }
+}

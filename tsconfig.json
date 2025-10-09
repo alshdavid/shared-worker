@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "checkJs": true,
+    "strict": true,
+    "lib": ["DOM", "ESNext"],
+    "module": "nodenext",
+    "declaration": true,
+    "moduleResolution": "nodenext"
+  },
+  "include": ["./*.ts"]
+}

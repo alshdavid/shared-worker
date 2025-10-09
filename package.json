@@ -1,0 +1,22 @@
+{
+  "name": "@alshdavid/shared-worker",
+  "version": "1.0.0",
+  "type": "module",
+  "license": "MIT",
+  "description": "Connection Manager for SharedWorkers",
+  "exports": {
+    "./*": {
+      "import": "./*",
+      "module-sync": "./*",
+      "types": "./*.d.ts"
+    }
+  },
+  "scripts": {
+    "serve": "npx http-server .",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "http-server": "*",
+    "typescript": "*"
+  }
+}

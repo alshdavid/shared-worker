@@ -1,0 +1,23 @@
+<base href="/examples/">
+
+<body>
+  <div id="count"></div>
+  <button id="increment">Increment</button>
+</body>
+
+<script type="module">
+  import { SharedWorker } from '../shared-worker.js'
+
+  const elm_div_count = document.getElementById('count')
+  const elm_btn_increment = document.getElementById('increment')
+
+  const worker = new SharedWorker('./worker.mjs', { type: "module" })
+  
+  worker.addEventListener('message', (e) => {
+    elm_div_count.innerHTML = e.data
+  })
+
+  elm_btn_increment.addEventListener('click', () => {
+    worker.postMessage(null)
+  })
+</script>
