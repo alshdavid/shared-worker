@@ -1,5 +1,4 @@
-// worker.mjs
-import { ConnectionManager } from "../connection-manager.js";
+import { ConnectionManager } from "../connection-manager.ts";
 
 // Shared state
 let count = 0;

@@ -1,0 +1,16 @@
+{
+  "name": "examples",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf dist && mkdir -p dist && cp index.html ./dist && npx esbuild ./index.ts --outfile=dist/index.js --format=esm --bundle --platform=browser && npx esbuild ./worker.ts --outfile=dist/worker.js --format=esm --bundle --platform=browser"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "esbuild": "^0.25.11"
+  }
+}

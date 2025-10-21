@@ -7,8 +7,10 @@
     "noEmit": true,
     "declaration": true,
     "moduleResolution": "nodenext",
+    "allowImportingTsExtensions": true,
     "paths": {
       "@alshdavid/shared-worker/*": ["../*"]
     }
-  }
+  },
+  "include": ["**/*.ts"]
 }
