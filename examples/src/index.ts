@@ -1,4 +1,4 @@
-import { SharedWorker } from '../shared-worker.ts'
+import { SharedWorker } from '../../shared-worker.ts'
 
 const elm_div_count = document.getElementById('count')!
 const elm_btn_increment = document.getElementById('increment')!

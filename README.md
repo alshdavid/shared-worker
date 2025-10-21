@@ -1,5 +1,9 @@
 # SharedWorker
 
+## Demo
+
+[https://alshdavid.github.io/shared-worker](https://alshdavid.github.io/shared-worker/)
+
 ## SharedWorker implementation that tracks connected clients
 
 The default implementation of `SharedWorker` does not notify clients when a tab/window disconnects.

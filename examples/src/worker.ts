@@ -1,4 +1,4 @@
-import { ConnectionManager } from "../connection-manager.ts";
+import { ConnectionManager } from "../../connection-manager.ts";
 
 // Shared state
 let count = 0;

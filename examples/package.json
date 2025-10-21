@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf dist && mkdir -p dist && cp index.html ./dist && npx esbuild ./index.ts --outfile=dist/index.js --format=esm --bundle --platform=browser && npx esbuild ./worker.ts --outfile=dist/worker.js --format=esm --bundle --platform=browser"
+    "build": "rm -rf dist && mkdir -p dist && cp src/index.html ./dist && npx esbuild ./src/index.ts --outfile=dist/index.js --format=esm --bundle --platform=browser && npx esbuild ./src/worker.ts --outfile=dist/worker.js --format=esm --bundle --platform=browser"
   },
   "keywords": [],
   "author": "",
