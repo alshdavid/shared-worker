@@ -1,6 +1,6 @@
 {
   "name": "@alshdavid/shared-worker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "license": "MIT",
   "description": "Connection Manager for SharedWorkers",
@@ -8,7 +8,7 @@
     "./*": {
       "import": "./*",
       "module-sync": "./*",
-      "types": "./*.d.ts"
+      "types": "./*"
     }
   },
   "scripts": {
