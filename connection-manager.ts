@@ -17,6 +17,7 @@ export class ConnectionManager extends EventTarget {
       port.start();
       const { data: id } = await onReady;
 
+      port.postMessage(null)
       const conn = new Connection(port, id);
 
       conn.addEventListener("disconnect", 

@@ -1,9 +1,11 @@
 export class SharedWorker extends EventTarget {
     #port;
+    #onReady;
     constructor(...args) {
         super();
         const id = crypto.randomUUID();
         const worker = new globalThis.SharedWorker(...args);
+        this.#onReady = new Promise((res) => worker.port.addEventListener("message", res, { once: true }));
         navigator.locks.request(id, async (_lock) => {
             worker.port.postMessage(id);
             worker.port.start();
@@ -13,12 +15,12 @@ export class SharedWorker extends EventTarget {
         this.#port = worker.port;
     }
     postMessage(...args) {
-        return this.#port.postMessage(...args);
+        this.#onReady.then(() => this.#port.postMessage(...args));
     }
     addEventListener(...args) {
-        return this.#port.addEventListener(...args);
+        this.#onReady.then(() => this.#port.addEventListener(...args));
     }
     removeEventListener(...args) {
-        return this.#port.removeEventListener(...args);
+        this.#onReady.then(() => this.#port.removeEventListener(...args));
     }
 }

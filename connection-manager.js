@@ -9,6 +9,7 @@ export class ConnectionManager extends EventTarget {
             const onReady = new Promise((res) => port.addEventListener("message", res, { once: true }));
             port.start();
             const { data: id } = await onReady;
+            port.postMessage(null);
             const conn = new Connection(port, id);
             conn.addEventListener("disconnect", () => this.#connections.delete(conn), { once: true });
             this.#connections.add(conn);
